@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: zaibfridi/backend
+  tag: 0.1.1
+  pullPolicy: IfNotPresent
+
+service:
+  name: backend-service
+  type: ClusterIP
+  port: 5000
+
+database:
+  host: database-service
+  user: dbuser
+  password: dbpassword
+  name: userdb
